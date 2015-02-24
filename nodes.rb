@@ -44,4 +44,6 @@ class DefNode < Struct.new(:name, :params, :body); end
 class ClassNode < Struct.new(:name, :body); end
 
 class IfNode < Struct.new(:condition, :body); end
-# TODO: while, for, loop
+
+class WhileNode < Struct.new(:condition, :body); end
+# TODO: for, loop
