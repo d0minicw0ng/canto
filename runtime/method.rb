@@ -10,7 +10,7 @@ class CantoMethod
 
     # Assign passed arguments to local variables
     @params.each_with_index do |param, index|
-      context.locals[params] = arguments[index]
+      context.locals[param] = arguments[index]
     end
 
     # The body is a node (created in the parser)
