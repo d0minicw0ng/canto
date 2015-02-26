@@ -6,11 +6,11 @@ require "llvm_compiler"
 class LLVMCompilerTest < Test::Unit::TestCase
   def test_compile
     code = <<-CODE
-def say_it:
-  x = "This is compiled!"
-  puts(x)
-say_it()
-CODE
+      def say_it:
+        x = "This is compiled!"
+        puts(x)
+      say_it()
+    CODE
 
     # Parse the code
     node = Parser.new.parse(code)
@@ -22,7 +22,7 @@ CODE
     compiler.finish
 
     # Uncomment to output LLVM byte-code
-    # compiler.dump
+    compiler.dump
 
     # Optimize the LLVM byte-code
     compiler.optimize
